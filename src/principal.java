@@ -59,6 +59,6 @@ public class principal extends JFrame implements ActionListener {
 		}
 	}
 	protected void actionPerformedBtnNewButton(ActionEvent e) {
-		txtO.append("sii, estoy vivo VENEZUELAAAAAAAA  jonas es marico , lo siento juli\n");
+		txtO.append("calla webon\n");
 	}
 }
