@@ -47,7 +47,7 @@ public class principal extends JFrame implements ActionListener {
 			contentPane.add(txtO);
 		}
 		{
-			btnNewButton = new JButton("vivo??");
+			btnNewButton = new JButton("muere");
 			btnNewButton.addActionListener(this);
 			btnNewButton.setBounds(140, 29, 89, 23);
 			contentPane.add(btnNewButton);
