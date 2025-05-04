@@ -60,6 +60,7 @@ public class principal extends JFrame implements ActionListener {
 			contentPane.add(btnNewButton_1);
 		}
 	}
+	
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == btnNewButton_1) {
 			actionPerformedBtnNewButton_1(e);
@@ -68,6 +69,8 @@ public class principal extends JFrame implements ActionListener {
 			actionPerformedBtnNewButton(e);
 		}
 	}
+	
+	
 	protected void actionPerformedBtnNewButton(ActionEvent e) {
 		txtO.append("chicos buenas noches\n");
 	}
