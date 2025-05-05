@@ -40,23 +40,23 @@ public class MenuPrincipal extends JFrame {
 		menuBar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		setJMenuBar(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("Archivo");
-		menuBar.add(mnNewMenu);
+		JMenu archivo = new JMenu("Archivo");
+		menuBar.add(archivo);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("Salir");
-		mnNewMenu.add(mntmNewMenuItem);
+		JMenuItem salir = new JMenuItem("Salir");
+		archivo.add(salir);
 		
-		JMenu mnNewMenu_1 = new JMenu("Inventario");
-		menuBar.add(mnNewMenu_1);
+		JMenu inventario = new JMenu("Inventario");
+		menuBar.add(inventario);
 		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("Agragar producto");
-		mnNewMenu_1.add(mntmNewMenuItem_1);
+		JMenuItem agregarPR = new JMenuItem("Agregar producto");
+		inventario.add(agregarPR);
 		
-		JMenuItem mntmNewMenuItem_3 = new JMenuItem("Buscar producto");
-		mnNewMenu_1.add(mntmNewMenuItem_3);
+		JMenuItem buscarPR = new JMenuItem("Buscar producto");
+		inventario.add(buscarPR);
 		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("Listar productos");
-		mnNewMenu_1.add(mntmNewMenuItem_2);
+		JMenuItem listarPR = new JMenuItem("Listar productos");
+		inventario.add(listarPR);
 		
 		JMenu mnNewMenu_2 = new JMenu("Ayuda");
 		menuBar.add(mnNewMenu_2);
