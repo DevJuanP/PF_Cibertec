@@ -26,7 +26,7 @@ public class LoginUSER extends JFrame {
 	private JTextField USUARIO;
 	private JPasswordField CONTRASEÑA;
 	 private HashMap<String, String> UsuariosRegistro;
-
+    
 	/**
 	 * Launch the application.
 	 */
@@ -99,7 +99,7 @@ public class LoginUSER extends JFrame {
 				}else if(UsuariosRegistro.containsKey(Usuario)&& UsuariosRegistro.get(Usuario).equals(Contraseña)) {
 					JOptionPane.showMessageDialog(null,"Inicio de sesion con exito");
 					//EL DISPOSE CIERRA LA VENTANA ACTUAL SEGUN LA LINEA DE CODIGO QUE SE EJECUTE SEA CORRECTA
-					dispose();//SE inicia correctamente y se cierra la ventana
+					new MenuPrincipal().setVisible(true);
 				}
 				else {
 					JOptionPane.showMessageDialog(null,"Usuario o Contraseña incorrectos.");
