@@ -15,7 +15,7 @@ public class MenuPrincipal extends JFrame {
 
 
 	public MenuPrincipal() {
-		
+		AddToInventario.cargarData();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 466, 300);
 		JMenuBar menuBar = new JMenuBar();
@@ -60,9 +60,13 @@ public class MenuPrincipal extends JFrame {
 		listarPR.addActionListener(e->new ListarPr().setVisible(true));
 		
 		itemAbout.addActionListener(e -> JOptionPane.showMessageDialog(this,"Sistema de inventario \n versión 1.1 Autores: yo pues","Acerca de",JOptionPane.INFORMATION_MESSAGE));
+		
+		//carga productos
+		
 	}
 	
 	public static void main(String[] args) {
+		//AddToInventario.cargarData();
 		MenuPrincipal frame = new MenuPrincipal();
 		frame.setVisible(true);
 	}
