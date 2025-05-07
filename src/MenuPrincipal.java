@@ -7,6 +7,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 
 public class MenuPrincipal extends JFrame {
@@ -26,8 +28,6 @@ public class MenuPrincipal extends JFrame {
 		
 		JMenuItem salir = new JMenuItem("Salir");
 		
-		menuBar.add(archivo);
-		archivo.add(salir);
 		
 		//inventario
 		JMenu inventario = new JMenu("Inventario");
@@ -38,19 +38,29 @@ public class MenuPrincipal extends JFrame {
 		
 		//ayuda
 		JMenu ayuda = new JMenu("Ayuda");
+		JMenuItem itemAbout = new JMenuItem("Acerca de");	
 		
 		//add
+		menuBar.add(archivo);
 		menuBar.add(inventario);
 		menuBar.add(ayuda);
+		
+			archivo.add(salir);
 	
-		inventario.add(agregarPR);
-		inventario.add(buscarPR);
-		inventario.add(listarPR);
+			inventario.add(agregarPR);
+			inventario.add(buscarPR);
+			inventario.add(listarPR);
+		
+			ayuda.add(itemAbout);
 		
 		//lógica
+		salir.addActionListener(e -> System.exit(0));	
+			
 		agregarPR.addActionListener(e->new RegistrarPr().setVisible(true));
-		buscarPR.addActionListener(e->new RegistrarPr().setVisible(true));
-		listarPR.addActionListener(e->new RegistrarPr().setVisible(true));
+		buscarPR.addActionListener(e->new BuscarPr().setVisible(true));
+		listarPR.addActionListener(e->new ListarPr().setVisible(true));
+		
+		itemAbout.addActionListener(e -> JOptionPane.showMessageDialog(this,"Sistema de inventario \n versión 1.1 Autores: yo pues","Acerca de",JOptionPane.INFORMATION_MESSAGE));
 	}
 	
 	public static void main(String[] args) {
