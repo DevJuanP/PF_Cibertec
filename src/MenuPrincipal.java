@@ -11,28 +11,9 @@ import java.awt.Font;
 
 public class MenuPrincipal extends JFrame {
 
-	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MenuPrincipal frame = new MenuPrincipal();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
-	 */
 	public MenuPrincipal() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 466, 300);
 		
@@ -40,32 +21,40 @@ public class MenuPrincipal extends JFrame {
 		menuBar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		setJMenuBar(menuBar);
 		
+		//archivo
 		JMenu archivo = new JMenu("Archivo");
-		menuBar.add(archivo);
 		
 		JMenuItem salir = new JMenuItem("Salir");
+		
+		menuBar.add(archivo);
 		archivo.add(salir);
 		
+		//inventario
 		JMenu inventario = new JMenu("Inventario");
-		menuBar.add(inventario);
 		
 		JMenuItem agregarPR = new JMenuItem("Agregar producto");
-		inventario.add(agregarPR);
-	
-		
 		JMenuItem buscarPR = new JMenuItem("Buscar producto");
-		inventario.add(buscarPR);
-		
 		JMenuItem listarPR = new JMenuItem("Listar productos");
+		
+		//ayuda
+		JMenu ayuda = new JMenu("Ayuda");
+		
+		//add
+		menuBar.add(inventario);
+		menuBar.add(ayuda);
+	
+		inventario.add(agregarPR);
+		inventario.add(buscarPR);
 		inventario.add(listarPR);
 		
-		JMenu mnNewMenu_2 = new JMenu("Ayuda");
-		menuBar.add(mnNewMenu_2);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
-		
+		//lógica
 		agregarPR.addActionListener(e->new RegistrarPr().setVisible(true));
+		buscarPR.addActionListener(e->new RegistrarPr().setVisible(true));
+		listarPR.addActionListener(e->new RegistrarPr().setVisible(true));
+	}
+	
+	public static void main(String[] args) {
+		MenuPrincipal frame = new MenuPrincipal();
+		frame.setVisible(true);
 	}
 }
