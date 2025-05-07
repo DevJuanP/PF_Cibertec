@@ -2,8 +2,6 @@ import java.awt.BorderLayout;
 
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.*;
 import java.awt.*;
@@ -17,6 +15,8 @@ public class RegistrarPr extends JFrame {
 	private JTextField NOMBRE;
 	private JTextField CANTIDAD;
 	private JTextField PRECIO;
+    public static ArrayList<ConstructorPR> inventario = new ArrayList<>();
+
 
 	/**
 	 * Launch the application.
@@ -91,6 +91,23 @@ public class RegistrarPr extends JFrame {
 		JButton btnNewButton = new JButton("AGREGAR");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//lelctura de datos
+			int id= Integer.parseInt(ID.getText());
+			String nombre= NOMBRE.getText();
+			int cantidad= Integer.parseInt(CANTIDAD.getText());
+			double precio = Double.parseDouble(PRECIO.getText());
+			
+			inventario.add(new ConstructorPR(id,nombre,cantidad,precio));
+			System.out.println(inventario+"jonas gei");
+			JOptionPane.showMessageDialog(null,"Item registrado con exito :D");
+			
+			//LIMPIEZA 
+			ID.setText("");
+			NOMBRE.setText("");
+			CANTIDAD.setText("");
+			PRECIO.setText("");
+				
+				
 				
 			}
 		});
