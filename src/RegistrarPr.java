@@ -17,14 +17,14 @@ public class RegistrarPr extends JFrame {
 	private JTextField PRECIO;
     public static ArrayList<ConstructorPR> inventario = new ArrayList<>();
 
-
+	
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				try {
+			try {
 					RegistrarPr frame = new RegistrarPr();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -91,6 +91,7 @@ public class RegistrarPr extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//lelctura de datos
+		try {		
 			int id= Integer.parseInt(ID.getText());
 			String nombre= NOMBRE.getText();
 			int cantidad= Integer.parseInt(CANTIDAD.getText());
@@ -105,9 +106,10 @@ public class RegistrarPr extends JFrame {
 			NOMBRE.setText("");
 			CANTIDAD.setText("");
 			PRECIO.setText("");
-				
-				
-				
+		}catch(NumberFormatException ex) {
+			JOptionPane.showMessageDialog(null,"Ha ocurrido un error: verifique los que los datos de ID, nombre, cantidad y precio sean correctos");
+		}catch(Exception ex) {JOptionPane.showConfirmDialog(null,"ERROR");
+		}
 			}
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
