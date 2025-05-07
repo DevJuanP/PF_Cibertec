@@ -18,7 +18,6 @@ public class MenuPrincipal extends JFrame {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 466, 300);
-		
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		setJMenuBar(menuBar);

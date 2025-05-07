@@ -12,6 +12,30 @@ public class ConstructorPR {
 		this.precio=precio; 
 		
 	}
+	//metodos get
+	public int GetId(){return ID;}
+	
+	public String GetNombre() {return nombre;}
+	
+	public int GetCantidad() {return cantidad;}
+	
+	public double GetPrecio() {return precio;}
+	
+	
+	
+	//metodos set
+	public void SetId(int id) {
+		this.ID = ID;
+	}
+	public void SetNombre(String nomnre) {
+		this.nombre = nombre;
+	}
+	public void SetCantidad(int cantidad) {
+		this.cantidad=cantidad;
+	}
+	public void SetPrecio(double precio) {
+		this.precio=precio;
+	}
 
 
 }
