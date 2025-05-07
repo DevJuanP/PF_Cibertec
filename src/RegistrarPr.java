@@ -41,7 +41,6 @@ public class RegistrarPr extends JFrame {
 		
 		setFont(new Font("Arial", Font.PLAIN, 13));
 		setTitle("AGREGAR PRODUCTO");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
