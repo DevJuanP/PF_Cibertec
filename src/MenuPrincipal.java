@@ -51,6 +51,7 @@ public class MenuPrincipal extends JFrame {
 		
 		JMenuItem agregarPR = new JMenuItem("Agregar producto");
 		inventario.add(agregarPR);
+	
 		
 		JMenuItem buscarPR = new JMenuItem("Buscar producto");
 		inventario.add(buscarPR);
@@ -64,5 +65,7 @@ public class MenuPrincipal extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		agregarPR.addActionListener(e->new RegistrarPr().setVisible(true));
 	}
 }

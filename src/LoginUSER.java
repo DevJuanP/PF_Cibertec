@@ -100,6 +100,7 @@ public class LoginUSER extends JFrame {
 					JOptionPane.showMessageDialog(null,"Inicio de sesion con exito");
 					//EL DISPOSE CIERRA LA VENTANA ACTUAL SEGUN LA LINEA DE CODIGO QUE SE EJECUTE SEA CORRECTA
 					new MenuPrincipal().setVisible(true);
+					dispose();
 				}
 				else {
 					JOptionPane.showMessageDialog(null,"Usuario o Contraseña incorrectos.");
