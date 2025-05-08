@@ -74,7 +74,11 @@ public class ModificarPR extends JFrame {
 		txtInfo.setEditable(false);
 		
 		btnBuscar.addActionListener(e -> {
-			idBuscado = Integer.parseInt(txtIdToFinf.getText());
+			try {
+				idBuscado = Integer.parseInt(txtIdToFinf.getText());
+			}catch(NumberFormatException ex){
+				JOptionPane.showMessageDialog(null, "ID no valido");
+			}
 			System.out.println("id: "+idBuscado);
 			
 			for(ConstructorPR p:RegistrarPr.inventario) {
@@ -109,9 +113,38 @@ public class ModificarPR extends JFrame {
 				JOptionPane.showMessageDialog(null, "No se ha seleccionado ningún producto a modificar");
 				return;
 			}
+			String name = txtNewName.getText();
+			int cant = 0;
+			double precio = 0;
+			try {
+				cant = Integer.parseInt(txtNewCantidad.getText());
+			}catch(NumberFormatException ex){
+				JOptionPane.showMessageDialog(null, "Debe colocar una cantidad entera");
+				return;
+			}
+			if(cant<0) {
+				JOptionPane.showMessageDialog(null, "No puede colocar una cantidad negativa");
+				return;
+			}
+			
+			try {
+				precio = Double.parseDouble(txtNewPrecio.getText());
+			}catch(NumberFormatException ex){
+				JOptionPane.showMessageDialog(null, "Debe colocar un precio de tipo numero");
+				return;
+			}
+			if(precio<0) {
+				JOptionPane.showMessageDialog(null, "No puede colocar un precio negativ");
+				return;
+			}
+			
 			for(ConstructorPR p:RegistrarPr.inventario) {
-				if(p.ID == idBuscado) {
-					
+				if(p.GetId() == idBuscado) {
+					p.SetNombre(name);
+					p.SetCantidad(cant);
+					p.SetPrecio(precio);
+					JOptionPane.showMessageDialog(null,"Se ha modificado el producto");
+					break;
 				}
 			}
 		});
