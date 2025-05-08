@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.BoxLayout;
@@ -6,35 +7,41 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import javax.swing.*;
+import java.awt.Font;
 
 
 public class BuscarPr extends JFrame {
 	
 	public BuscarPr() {
+		getContentPane().setBackground(new Color(223, 240, 216));
 		setTitle("inicio de sesion");
 		setSize(500, 400);
 		setLocationRelativeTo(null);
-		setLayout(null);
+		getContentPane().setLayout(null);
 		
 		JLabel lblBuscar = new JLabel("Nombre a buscar: ");
-		lblBuscar.setBounds(30, 30, 120, 25);
+		lblBuscar.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblBuscar.setBounds(59, 30, 120, 25);
 		
 		JTextField  txtBuscar = new JTextField();
-		txtBuscar.setBounds(160, 30, 120, 25);
+		txtBuscar.setBounds(178, 30, 120, 25);
 		
 		JButton btnBuscar = new JButton("Buscar");
-		btnBuscar.setBounds(150, 80, 150, 25);
+		btnBuscar.setBounds(164, 81, 150, 25);
+		btnBuscar.setBackground(new Color(76, 175, 80)); 
+
 		
 		JTextArea txtResultados = new JTextArea();
 		
 		JScrollPane sp = new JScrollPane();
-		sp.setViewportView(txtResultados);
 		sp.setBounds(80, 140, 330, 170);
+		sp.setViewportView(txtResultados);
+		getContentPane().setLayout(null);
 		
-		add(lblBuscar);
-		add(txtBuscar);
-		add(btnBuscar);
-		add(sp);
+		getContentPane().add(lblBuscar);
+		getContentPane().add(txtBuscar);
+		getContentPane().add(btnBuscar);
+		getContentPane().add(sp);
 		
 		//lógica:
 		btnBuscar.addActionListener(e -> {
