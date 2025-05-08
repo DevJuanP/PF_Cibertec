@@ -58,13 +58,7 @@ public class ListarPr extends JFrame {
 		LISTA.setText(sb.toString());
 		
 		JButton CERRAR = new JButton("VOLVER");
-		CERRAR.addActionListener(new ActionListener( ) {
-			public void actionPerformed(ActionEvent e) {
-				dispose();
-				
-				
-			}
-		});
+		CERRAR.addActionListener(e -> dispose());
 		CERRAR.setBounds(168, 233, 85, 30);
 		contentPane.add(CERRAR);
 	}
