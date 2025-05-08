@@ -1,7 +1,3 @@
-import java.awt.BorderLayout;
-
-import java.awt.EventQueue;
-
 import javax.swing.border.EmptyBorder;
 import javax.swing.*;
 import java.awt.*;
@@ -44,6 +40,7 @@ public class RegistrarPr extends JFrame {
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBackground(new Color(223, 240, 216)); 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
@@ -124,6 +121,7 @@ public class RegistrarPr extends JFrame {
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		btnNewButton.setBounds(128, 203, 136, 31);
+		btnNewButton.setBackground(new Color(76, 175, 80)); 
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("PRODUCTO");

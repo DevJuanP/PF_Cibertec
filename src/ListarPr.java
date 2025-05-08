@@ -60,6 +60,8 @@ public class ListarPr extends JFrame {
 		LISTA.setText(sb.toString());
 		
 		JButton CERRAR = new JButton("VOLVER");
+		CERRAR.setForeground(new Color(240, 255, 240));
+		CERRAR.setBackground(new Color(76, 175, 80));
 		CERRAR.addActionListener(e -> dispose());
 		CERRAR.setBounds(168, 233, 85, 30);
 		contentPane.add(CERRAR);
