@@ -6,6 +6,7 @@ import javax.swing.*;
 
 public class ModificarPR extends JFrame {
 	private ConstructorPR PrAmodificar = null;
+	private int idBuscado;
 
 	public ModificarPR() {
 		setTitle("modificar producto");
@@ -73,7 +74,7 @@ public class ModificarPR extends JFrame {
 		txtInfo.setEditable(false);
 		
 		btnBuscar.addActionListener(e -> {
-			int idBuscado = Integer.parseInt(txtIdToFinf.getText());
+			idBuscado = Integer.parseInt(txtIdToFinf.getText());
 			System.out.println("id: "+idBuscado);
 			
 			for(ConstructorPR p:RegistrarPr.inventario) {
@@ -107,6 +108,11 @@ public class ModificarPR extends JFrame {
 			if (PrAmodificar == null) {
 				JOptionPane.showMessageDialog(null, "No se ha seleccionado ningún producto a modificar");
 				return;
+			}
+			for(ConstructorPR p:RegistrarPr.inventario) {
+				if(p.ID == idBuscado) {
+					
+				}
 			}
 		});
 		
