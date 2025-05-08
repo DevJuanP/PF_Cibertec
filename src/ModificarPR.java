@@ -43,18 +43,12 @@ public class ModificarPR extends JFrame {
 			for(ConstructorPR p:RegistrarPr.inventario) {
 				if(p.ID == idBuscado) {
 					PrAmodificar = p;
-					System.out.println("producto: "+"id: " + PrAmodificar.ID + "\n"+
-						"Producto: " + PrAmodificar.nombre + "\n"+
-						"Cantidad : " + PrAmodificar.cantidad + "\n"+
-						"Precio: " + PrAmodificar.precio);
 					break;
 				}
 			}
-			
 			if(PrAmodificar == null) {
 				txtInfo.setText("Producto no encontrado");
 			}else {
-				
 				txtInfo.setText("id: " + PrAmodificar.ID + "\n"+
 						"Producto: " + PrAmodificar.nombre + "\n"+
 						"Cantidad : " + PrAmodificar.cantidad + "\n"+
