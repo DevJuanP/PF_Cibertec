@@ -34,6 +34,7 @@ public class MenuPrincipal extends JFrame {
 		JMenuItem agregarPR = new JMenuItem("Agregar producto");
 		JMenuItem buscarPR = new JMenuItem("Buscar producto");
 		JMenuItem listarPR = new JMenuItem("Listar productos");
+		JMenuItem ModificarPR = new JMenuItem("Modificar productos");
 		
 		//ayuda
 		JMenu ayuda = new JMenu("Ayuda");
@@ -49,6 +50,7 @@ public class MenuPrincipal extends JFrame {
 			inventario.add(agregarPR);
 			inventario.add(buscarPR);
 			inventario.add(listarPR);
+			inventario.add(ModificarPR);
 		
 			ayuda.add(itemAbout);
 		
@@ -58,6 +60,8 @@ public class MenuPrincipal extends JFrame {
 		agregarPR.addActionListener(e->new RegistrarPr().setVisible(true));
 		buscarPR.addActionListener(e->new BuscarPr().setVisible(true));
 		listarPR.addActionListener(e->new ListarPr().setVisible(true));
+		ModificarPR.addActionListener(e->new ModificarPR().setVisible(true));
+		
 		
 		itemAbout.addActionListener(e -> JOptionPane.showMessageDialog(this,"Sistema de inventario \n versión 1.1 Autores: yo pues","Acerca de",JOptionPane.INFORMATION_MESSAGE));
 		
