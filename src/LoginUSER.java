@@ -53,6 +53,7 @@ public class LoginUSER extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		 contentPane.setBackground(new Color(223, 240, 216)); 
 		
 		JLabel lblNewLabel = new JLabel("Inicias sesion");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
@@ -109,6 +110,8 @@ public class LoginUSER extends JFrame {
 		});
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		btnNewButton.setBounds(161, 172, 122, 21);
+		btnNewButton.setBackground(new Color(76, 175, 80)); 
+		btnNewButton.setForeground(Color.WHITE); 
 		contentPane.add(btnNewButton);
 	}
 }
