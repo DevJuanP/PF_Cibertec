@@ -96,12 +96,12 @@ public class RegistrarPr extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				//lelctura de datos
 		try {		
-			//int id= inventario.size()+1;
+			int currentId= inventario.size()+1;
 			String nombre= NOMBRE.getText();
 			int cantidad= Integer.parseInt(CANTIDAD.getText());
 			double precio = Double.parseDouble(PRECIO.getText());
 			
-			inventario.add(new ConstructorPR(id,nombre,cantidad,precio));
+			inventario.add(new ConstructorPR(currentId,nombre,cantidad,precio));
 			System.out.println(inventario+"jonas gei");
 			JOptionPane.showMessageDialog(null,"Item registrado con exito :D");
 			
