@@ -10,15 +10,28 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
 import java.awt.Font;
+import java.awt.Color;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 public class MenuPrincipal extends JFrame {
 
 
 	public MenuPrincipal() {
+		getContentPane().setBackground(new Color(223, 240, 216));
+		getContentPane().setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("MENU DE INVENTARIO");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 24));
+		lblNewLabel.setBounds(50, 100, 350, 40);
+		getContentPane().add(lblNewLabel);
 		AddToInventario.cargarData();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 466, 300);
 		JMenuBar menuBar = new JMenuBar();
+		menuBar.setForeground(Color.BLACK);
+		menuBar.setBackground(new Color(76, 175, 80)); 
 		menuBar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		setJMenuBar(menuBar);
 		

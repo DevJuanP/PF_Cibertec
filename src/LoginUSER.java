@@ -53,7 +53,7 @@ public class LoginUSER extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		 contentPane.setBackground(new Color(223, 240, 216)); 
+		contentPane.setBackground(new Color(223, 240, 216)); 
 		
 		JLabel lblNewLabel = new JLabel("Inicias sesion");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 18));
