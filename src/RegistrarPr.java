@@ -89,7 +89,7 @@ public class RegistrarPr extends JFrame {
 		contentPane.add(PRECIO);
 		
 		//logica
-		int id= inventario.size()+1;
+		int id = inventario.size()+1;
 		ID.setText(""+id);
 		JButton btnNewButton = new JButton("AGREGAR");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -106,7 +106,8 @@ public class RegistrarPr extends JFrame {
 			JOptionPane.showMessageDialog(null,"Item registrado con exito :D");
 			
 			//LIMPIEZA 
-			ID.setText("");
+			int newId = inventario.size()+1;
+			ID.setText(""+newId);
 			NOMBRE.setText("");
 			CANTIDAD.setText("");
 			PRECIO.setText("");
