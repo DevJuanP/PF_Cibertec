@@ -68,6 +68,7 @@ public class RegistrarPr extends JFrame {
 		contentPane.add(lblNewLabel_3_3);
 		
 		ID = new JTextField();
+		ID.setEditable(false);
 		ID.setBounds(198, 52, 177, 24);
 		contentPane.add(ID);
 		ID.setColumns(10);
@@ -87,12 +88,15 @@ public class RegistrarPr extends JFrame {
 		PRECIO.setBounds(198, 154, 177, 24);
 		contentPane.add(PRECIO);
 		
+		//logica
+		int id= inventario.size()+1;
+		ID.setText(""+id);
 		JButton btnNewButton = new JButton("AGREGAR");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//lelctura de datos
 		try {		
-			int id= Integer.parseInt(ID.getText());
+			//int id= inventario.size()+1;
 			String nombre= NOMBRE.getText();
 			int cantidad= Integer.parseInt(CANTIDAD.getText());
 			double precio = Double.parseDouble(PRECIO.getText());
