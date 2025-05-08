@@ -98,10 +98,12 @@ public class RegistrarPr extends JFrame {
 			int cantidad= Integer.parseInt(CANTIDAD.getText());
 			double precio = Double.parseDouble(PRECIO.getText());
 			
-			if(cantidad < 0 || precio < 0) {
-                JOptionPane.showInternalMessageDialog(null, "EL VALOR NO PUEDE SER NEGATIVO");
-                return;
-        }
+			if(cantidad < 0 || precio < 0 ) {
+                JOptionPane.showInternalMessageDialog(null, "EL VALOR NO PUEDE SER NEGATIVO");                    
+            }
+			
+			
+			
 			
 			inventario.add(new ConstructorPR(currentId,nombre,cantidad,precio));
 			System.out.println(inventario+"jonas gei");
