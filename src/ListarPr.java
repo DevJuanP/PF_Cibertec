@@ -52,10 +52,10 @@ public class ListarPr extends JFrame {
 		
 		StringBuilder sb= new StringBuilder();
 		for(ConstructorPR producto: RegistrarPr.inventario ){
-			sb.append("ID: ").append(producto.ID+"\n");
-			sb.append("nombre: ").append(producto.nombre+"\n");
-			sb.append("precio: ").append(producto.precio+"\n");
-			sb.append("cantidad: ").append(producto.cantidad+"\n\n");
+			sb.append("ID: ").append(producto.GetId()+"\n");
+			sb.append("nombre: ").append(producto.GetNombre()+"\n");
+			sb.append("precio: ").append(producto.GetPrecio()+"\n");
+			sb.append("cantidad: ").append(producto.GetCantidad()+"\n\n");
 		}
 		LISTA.setText(sb.toString());
 		
