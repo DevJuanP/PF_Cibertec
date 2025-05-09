@@ -76,7 +76,7 @@ public class MenuPrincipal extends JFrame {
 		ModificarPR.addActionListener(e->new ModificarPR().setVisible(true));
 		
 		
-		itemAbout.addActionListener(e -> JOptionPane.showMessageDialog(this,"Sistema de inventario \n versión 1.1 Autores: yo pues","Acerca de",JOptionPane.INFORMATION_MESSAGE));
+		itemAbout.addActionListener(e -> JOptionPane.showMessageDialog(this,"Sistema de inventario \n versión 1.1\n Autores: \n   Juan P.\n   Oscar M. \n   Jhonatan E.","Acerca de",JOptionPane.INFORMATION_MESSAGE));
 		
 		//carga productos
 		
