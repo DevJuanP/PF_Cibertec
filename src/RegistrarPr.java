@@ -107,7 +107,6 @@ public class RegistrarPr extends JFrame {
 			
 			
 			inventario.add(new ConstructorPR(currentId,nombre,cantidad,precio));
-			System.out.println(inventario+"jonas gei");
 			JOptionPane.showMessageDialog(null,"Item registrado con exito :D");
 			
 			//LIMPIEZA 
