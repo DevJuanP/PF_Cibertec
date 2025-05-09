@@ -43,16 +43,16 @@ public class BuscarPr extends JFrame {
 		getContentPane().add(btnBuscar);
 		getContentPane().add(sp);
 		
-		//l�gica:
+		//lógica:
 		btnBuscar.addActionListener(e -> {
-			String txtToAsk = txtBuscar.getText().toLowerCase();
-			txtResultados.setText("");
+			String txtToAsk = txtBuscar.getText().toLowerCase();//Gato → gato
+			txtResultados.setText("");//
 			for(ConstructorPR p:RegistrarPr.inventario) {
-				if(p.nombre.toLowerCase().contains(txtToAsk)) {
-					txtResultados.append("id: " + p.ID + "\n"+
-										"Producto: " + p.nombre + "\n"+
-										"Cantidad : " + p.cantidad + "\n"+
-										"Precio: " + p.precio + "\n\n");
+				if(p.GetNombre().toLowerCase().contains(txtToAsk)) {
+					txtResultados.append("id: " + p.GetId() + "\n"+
+										"Producto: " + p.GetNombre() + "\n"+
+										"Cantidad : " + p.GetCantidad() + "\n"+
+										"Precio: " + p.GetPrecio() + "\n\n");
 				}
 			}
 			

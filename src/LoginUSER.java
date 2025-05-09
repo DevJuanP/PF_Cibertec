@@ -25,7 +25,7 @@ public class LoginUSER extends JFrame {
 	private JPanel contentPane;
 	private JTextField USUARIO;
 	private JPasswordField CONTRASEÑA;
-	 private HashMap<String, String> UsuariosRegistro;
+	private HashMap<String, String> UsuariosRegistro;
     
 	/**
 	 * Launch the application.
